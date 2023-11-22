@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import SideBar from '../components/admin/Sidebar';
-import Notice from '../components/admin/Notice';
+import User from '../components/admin/User';
 
 const Admin: React.FC = () => {
-    const [selectedItem, setSelectedItem] = useState<string>('공지사항');
+    const [selectedItem, setSelectedItem] = useState<string>('회원정보');
     const [searchQuery, setSearchQuery] = useState<string>('');
 
     return (
@@ -14,7 +14,7 @@ const Admin: React.FC = () => {
                     onItemSelect={setSelectedItem}
                     onSearch={(query: string) => setSearchQuery(query)}
                 />
-                <Notice selectedItem={selectedItem} searchQuery={searchQuery} />
+                <User selectedItem={selectedItem} searchQuery={searchQuery} />
             </Container>
         </>
     );

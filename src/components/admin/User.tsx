@@ -1,11 +1,8 @@
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import OrderDropDown from '../community/OrderDropDown';
-import WriteIcon from '../../img/community/write.svg';
-import PostList from '../community/PostList';
-import { PostBoxProp } from '../community/PostBox';
+import UserList from './UserList';
 
-interface NoticeProps {
+interface UserProps {
     selectedItem: string;
     searchQuery: string;
 }
@@ -26,30 +23,24 @@ const contentSubtitles: Record<string, string> = {
     기타: '미정.',
 };
 
-const Notice: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
+const User: React.FC<UserProps> = ({ selectedItem, searchQuery }) => {
     const content = selectedItem;
     const subtitle = contentSubtitles[content];
 
-    //api 연결할때 PostList에 props 추가해서 카테고리에 맞는 data 받아서 구성하도록 수정할 예정
     return (
         <Wrapper>
             <div className="TitleUniversity">
                 <Title>{content}</Title>
                 <UniversityName>홍익대학교</UniversityName>
             </div>
-            <Divider />
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <OrderDropDown />
-                <Button>
-                    <img src={WriteIcon} alt="펜" />
-                    글쓰기
-                </Button>
+
+            <div style={{ display: 'flex' }}>
+                <UserList />
             </div>
-            <PostList searchQuery={searchQuery} />
         </Wrapper>
     );
 };
-export default Notice;
+export default User;
 
 const Wrapper = styled.div`
     width: 74.5%;
