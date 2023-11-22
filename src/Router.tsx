@@ -14,6 +14,7 @@ import ProjectList from './components/project/ProjectList';
 import Community from './routes/Community';
 import RecruitPage from './routes/RecruitPage';
 import AboutPage from './routes/AboutPage';
+import Admin from './routes/Admin';
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <AboutPage />,
+            },
+            {
+                path: '/admin',
+                element: <Admin />,
             },
         ],
     },
