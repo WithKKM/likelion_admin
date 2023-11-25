@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import EditModal from './EditModal';
 import { UserData, fetchDataFromApi } from './UserData';
@@ -175,6 +175,8 @@ const Wrapper = styled.div`
     text-align: left;
     align-items: center;
     justify-content: space-between;
+
+    max-height: 1660px;
 
     .name {
         width: 83px;

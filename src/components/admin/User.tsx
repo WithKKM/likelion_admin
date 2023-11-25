@@ -2,11 +2,35 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import UserList from './UserList';
 
-const User: React.FC = () => {
+interface UserProps {
+    selectedItem: string;
+    searchQuery: string;
+}
+
+const contentSubtitles: Record<string, string> = {
+    회원정보: '멋대 중앙의 공지사항을 확인할 수 있을지도?.',
+    모집알림: '미정.',
+    전체게시글: '미정.',
+    공지사항: '미정.',
+    질문건의: '미정.',
+    정보공유: '미정.',
+    플젝모집: '미정.',
+    플젝자랑: '미정.',
+    프론트: '미정.',
+    백: '미정.',
+    기획: '미정.',
+    디자인: '미정.',
+    기타: '미정.',
+};
+
+const User: React.FC<UserProps> = ({ selectedItem, searchQuery }) => {
+    const content = selectedItem;
+    const subtitle = contentSubtitles[content];
+
     return (
         <Wrapper>
             <div className="TitleUniversity">
-                <Title>회원 정보</Title>
+                <Title>{content}</Title>
                 <UniversityName>홍익대학교</UniversityName>
             </div>
 
@@ -24,7 +48,7 @@ const Wrapper = styled.div`
 
     .TitleUniversity {
         display: flex;
-        align-items: baseline;
+        align-items: baseline; // Adjust alignment as needed
     }
 `;
 
