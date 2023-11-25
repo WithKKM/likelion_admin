@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TableRow } from './UserList';
 import styled from 'styled-components';
-import cancel from '../../img/admin/Cancel.svg';
+import cancel from '../../../img/admin/Cancel.svg';
 
 interface EditModalProps {
     initialData: Partial<TableRow>;

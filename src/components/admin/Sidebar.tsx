@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import search from '../../img/community/search.svg';
+import { useNavigate } from 'react-router';
 
 interface SideBarProps {
     onItemSelect: (item: string) => void;
@@ -12,6 +13,14 @@ const SideBar: React.FC<SideBarProps> = ({ onItemSelect, onSearch }) => {
     const [selectedTab, setSelectedTab] = useState<string>('공지사항');
     const [inputValue, setInputValue] = useState<string>('');
     const [showSubList, setShowSubList] = useState(false);
+
+    const navigate = useNavigate();
+    const goAlert = (): void => {
+        navigate('recruitalert');
+    };
+    const goUser = (): void => {
+        navigate('/admin');
+    };
 
     function handleToggleSubList() {
         setShowSubList(prevState => !prevState);
@@ -24,20 +33,14 @@ const SideBar: React.FC<SideBarProps> = ({ onItemSelect, onSearch }) => {
                 <Tab
                     className="ParentTab"
                     $isSelected={selectedTab === '회원정보'}
-                    onClick={() => {
-                        onItemSelect('회원정보');
-                        setSelectedTab('회원정보');
-                    }}
+                    onClick={goUser}
                 >
                     회원정보
                 </Tab>
                 <Tab
                     className="ParentTab"
                     $isSelected={selectedTab === '모집알림'}
-                    onClick={() => {
-                        onItemSelect('모집알림');
-                        setSelectedTab('모집알림');
-                    }}
+                    onClick={goAlert}
                 >
                     모집알림
                 </Tab>

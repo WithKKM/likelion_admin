@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import SideBar from '../components/admin/Sidebar';
+import Notice from '../components/admin/board/Notice';
 
-const Admin = () => {
-    const [selectedItem, setSelectedItem] = useState<string>('회원정보');
+const AdminBoard: React.FC = () => {
+    const [selectedItem, setSelectedItem] = useState<string>('전체게시글');
     const [searchQuery, setSearchQuery] = useState<string>('');
 
     return (
@@ -14,11 +14,13 @@ const Admin = () => {
                     onItemSelect={setSelectedItem}
                     onSearch={(query: string) => setSearchQuery(query)}
                 />
-                <Outlet />
+                <Notice selectedItem={selectedItem} searchQuery={searchQuery} />
             </Container>
         </>
     );
 };
+
+export default AdminBoard;
 
 const Container = styled.div`
     max-width: 1280px;
@@ -31,5 +33,3 @@ const Container = styled.div`
     align-items: center;
     margin-top: 100px;
 `;
-
-export default Admin;

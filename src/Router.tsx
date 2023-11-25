@@ -20,6 +20,7 @@ import User from './components/admin/User';
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
+import AdminBoard from './routes/AdminBoard';
 
 const router = createBrowserRouter([
     {
@@ -99,10 +100,18 @@ const router = createBrowserRouter([
                 element: <Admin />,
                 children: [
                     {
+                        path: '',
+                        element: <User />,
+                    },
+                    {
                         path: 'recruitalert',
                         element: <RecruitAlert />,
                     },
                 ],
+            },
+            {
+                path: '/adminboard',
+                element: <AdminBoard />,
             },
         ],
     },

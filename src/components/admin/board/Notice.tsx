@@ -1,14 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import UserList from './user/UserList';
+import OrderDropDown from './OrderDropDown';
+import WriteIcon from '../../../img/community/write.svg';
+import PostList from './PostList';
+import { PostBoxProp } from './PostBox';
+
+interface NoticeProps {
+    selectedItem: string;
+    searchQuery: string;
+}
 
 const contentSubtitles: Record<string, string> = {
-    회원정보: '멋대 중앙의 공지사항을 확인할 수 있을지도?.',
-    모집알림: '미정.',
-    전체게시글: '미정.',
-    공지사항: '미정.',
+    공지사항: '멋대 중앙의 공지사항을 확인할 수 있어요.',
     질문건의: '미정.',
     정보공유: '미정.',
+    팀원모짐: '미정.',
     플젝모집: '미정.',
     플젝자랑: '미정.',
     프론트: '미정.',
@@ -18,47 +24,38 @@ const contentSubtitles: Record<string, string> = {
     기타: '미정.',
 };
 
-const User = () => {
+const Notice: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
+    const content = selectedItem;
+    const subtitle = contentSubtitles[content];
+
+    //api 연결할때 PostList에 props 추가해서 카테고리에 맞는 data 받아서 구성하도록 수정할 예정
     return (
         <Wrapper>
-            <div className="TitleUniversity">
-                <Title>회원정보</Title>
-                <UniversityName>홍익대학교</UniversityName>
+            <Title>{content}</Title>
+            <SubTitle>{subtitle}</SubTitle>
+            <Divider />
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <OrderDropDown />
+                <Button>
+                    <img src={WriteIcon} alt="펜" />
+                    글쓰기
+                </Button>
             </div>
-
-            <div style={{ display: 'flex' }}>
-                <UserList />
-            </div>
+            <PostList searchQuery={searchQuery} />
         </Wrapper>
     );
 };
-export default User;
+export default Notice;
 
 const Wrapper = styled.div`
     width: 74.5%;
     height: 90vh;
-
-    .TitleUniversity {
-        display: flex;
-        align-items: baseline; // Adjust alignment as needed
-    }
 `;
 
 const Title = styled.div`
     font-size: 40px;
     font-weight: 700;
     color: var(--Grey-900, #212224);
-`;
-
-const UniversityName = styled.div`
-    font-size: 20px;
-    font-weight: 600;
-    color: #ff7710; // 디자인에 맞게 색상 조정
-
-    border-radius: 42px;
-    padding: 6px 12px 6px 12px;
-    margin: 12px;
-    background: #fff2e8;
 `;
 
 const SubTitle = styled.div`
