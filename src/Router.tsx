@@ -15,6 +15,8 @@ import Community from './routes/Community';
 import RecruitPage from './routes/RecruitPage';
 import AboutPage from './routes/AboutPage';
 import Admin from './routes/Admin';
+import RecruitAlert from './components/admin/RecruitAlert';
+import User from './components/admin/User';
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
@@ -95,6 +97,12 @@ const router = createBrowserRouter([
             {
                 path: '/admin',
                 element: <Admin />,
+                children: [
+                    {
+                        path: 'recruitalert',
+                        element: <RecruitAlert />,
+                    },
+                ],
             },
         ],
     },
