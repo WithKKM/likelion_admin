@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import UserList, { TableRow } from './user/AlertList';
+import UserList from './user/UserList';
 
 const contentSubtitles: Record<string, string> = {
     회원정보: '멋대 중앙의 공지사항을 확인할 수 있을지도?.',
@@ -19,28 +19,14 @@ const contentSubtitles: Record<string, string> = {
 };
 
 const RecruitAlert = () => {
-    const [selectedItems, setSelectedItems] = useState<TableRow[]>([]);
-
-    const handleSendNotification = () => {
-        // 알림을 보내는 로직 추가
-        console.log('선택된 아이템:', selectedItems);
-        // selectedItems에 있는 이메일 주소로 알림을 보내는 로직을 추가 예정
-    };
-
     return (
         <Wrapper>
-            <div className="TitleAlertCheck">
+            <div className="TitleUniversity">
                 <Title>모집 알림</Title>
-                <Button
-                    disabled={selectedItems.length === 0}
-                    onClick={handleSendNotification}
-                >
-                    선택 알림 보내기
-                </Button>
             </div>
 
             <div style={{ display: 'flex' }}>
-                <UserList setSelectedItems={setSelectedItems} />
+                <UserList />
             </div>
         </Wrapper>
     );
@@ -50,12 +36,6 @@ export default RecruitAlert;
 const Wrapper = styled.div`
     width: 74.5%;
     height: 90vh;
-
-    .TitleAlertCheck {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-    }
 `;
 
 const Title = styled.div`
@@ -79,27 +59,19 @@ const Divider = styled.div`
     margin-bottom: 4px;
 `;
 
-const Button = styled.button<{ disabled?: boolean }>(
-    ({ disabled }) => `
-      padding: 8px 20px 8px 14px;
-      border-radius: 6px;
-      background-color: ${disabled ? '#ADB3BA' : '#ff7710'};
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 12px;
-  
-      font-size: 16px;
-      color: #fff;
-      font-weight: 700;
-      cursor: ${disabled ? 'not-allowed' : 'pointer'};
-      border: none;
-      outline: none;
-  
-      &:hover {
-          background-color: ${disabled ? '#ADB3BA' : '#ff7710'};
-      }
-    `,
-);
+const Button = styled.div`
+    padding: 8px 20px 8px 14px;
+    border-radius: 6px;
+    background-color: #ff7710;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+`;

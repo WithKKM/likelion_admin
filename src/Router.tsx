@@ -17,7 +17,10 @@ import AboutPage from './routes/AboutPage';
 import Admin from './routes/Admin';
 import RecruitAlert from './components/admin/RecruitAlert';
 import User from './components/admin/User';
+<<<<<<< HEAD
 import Board from './components/admin/Board';
+=======
+>>>>>>> parent of 4392543 (모집알림 구현)
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
@@ -113,6 +116,10 @@ const router = createBrowserRouter([
                         element: <AdminBoard />,
                     },
                 ],
+            },
+            {
+                path: '/adminboard',
+                element: <AdminBoard />,
             },
         ],
     },
