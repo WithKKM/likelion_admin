@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import OrderDropDown from './OrderDropDown';
+import OrderDropDown from './board/OrderDropDown';
 import WriteIcon from '../../../img/community/write.svg';
-import PostList from './PostList';
-import { PostBoxProp } from './PostBox';
+import PostList from './board/PostList';
+import { PostBoxProp } from './board/PostBox';
 
 interface NoticeProps {
     selectedItem: string;

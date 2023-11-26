@@ -17,10 +17,10 @@ import AboutPage from './routes/AboutPage';
 import Admin from './routes/Admin';
 import RecruitAlert from './components/admin/RecruitAlert';
 import User from './components/admin/User';
+import Board from './components/admin/Notice';
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
-import AdminBoard from './routes/AdminBoard';
 
 const router = createBrowserRouter([
     {
@@ -108,10 +108,6 @@ const router = createBrowserRouter([
                         element: <RecruitAlert />,
                     },
                 ],
-            },
-            {
-                path: '/adminboard',
-                element: <AdminBoard />,
             },
         ],
     },
