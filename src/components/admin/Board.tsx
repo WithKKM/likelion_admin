@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import OrderDropDown from './board/OrderDropDown';
-import WriteIcon from '../../../img/community/write.svg';
+import WriteIcon from '../../img/community/write.svg';
 import PostList from './board/PostList';
 import { PostBoxProp } from './board/PostBox';
 
@@ -11,10 +11,12 @@ interface NoticeProps {
 }
 
 const contentSubtitles: Record<string, string> = {
-    공지사항: '멋대 중앙의 공지사항을 확인할 수 있어요.',
+    회원정보: '멋대 중앙의 공지사항을 확인할 수 있을지도?.',
+    모집알림: '미정.',
+    전체게시글: '미정.',
+    공지사항: '미정.',
     질문건의: '미정.',
     정보공유: '미정.',
-    팀원모짐: '미정.',
     플젝모집: '미정.',
     플젝자랑: '미정.',
     프론트: '미정.',
@@ -24,15 +26,13 @@ const contentSubtitles: Record<string, string> = {
     기타: '미정.',
 };
 
-const Notice: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
+const Board: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
     const content = selectedItem;
-    const subtitle = contentSubtitles[content];
 
     //api 연결할때 PostList에 props 추가해서 카테고리에 맞는 data 받아서 구성하도록 수정할 예정
     return (
         <Wrapper>
             <Title>{content}</Title>
-            <SubTitle>{subtitle}</SubTitle>
             <Divider />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <OrderDropDown />
@@ -45,7 +45,7 @@ const Notice: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
         </Wrapper>
     );
 };
-export default Notice;
+export default Board;
 
 const Wrapper = styled.div`
     width: 74.5%;

@@ -21,6 +21,9 @@ const SideBar: React.FC<SideBarProps> = ({ onItemSelect, onSearch }) => {
     const goUser = (): void => {
         navigate('/admin');
     };
+    const goBoard = (): void => {
+        navigate('board');
+    };
 
     function handleToggleSubList() {
         setShowSubList(prevState => !prevState);
@@ -51,164 +54,170 @@ const SideBar: React.FC<SideBarProps> = ({ onItemSelect, onSearch }) => {
                         $isSelected={false}
                         onClick={() => {
                             handleToggleSubList();
+                            onItemSelect('게시판');
                         }}
                     >
                         게시판{' '}
                         {showSubList ? <IoIosArrowUp /> : <IoIosArrowDown />}
                     </Tab>
-
-                    {showSubList && (
-                        <>
-                            <div className="boardcontent">
-                                <Tab
-                                    $isSelected={selectedTab === '전체 게시글'}
-                                    onClick={() => {
-                                        onItemSelect('전체 게시글');
-                                        setSelectedTab('전체 게시글');
-                                    }}
-                                >
-                                    전체 게시글
-                                </Tab>
-                            </div>
-                            <Divider />
-                            <div className="boardcontent">
-                                <SpecialTab
-                                    $isSelected={selectedTab === '멋대중앙'}
-                                    onClick={() => {
-                                        onItemSelect('멋대중앙');
-                                        setSelectedTab('멋대중앙');
-                                    }}
-                                >
-                                    멋대중앙
-                                </SpecialTab>
-                                <Tab
-                                    $isSelected={selectedTab === '공지사항'}
-                                    onClick={() => {
-                                        onItemSelect('공지사항');
-                                        setSelectedTab('공지사항');
-                                    }}
-                                >
-                                    공지사항
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '질문건의'}
-                                    onClick={() => {
-                                        onItemSelect('질문건의');
-                                        setSelectedTab('질문건의');
-                                    }}
-                                >
-                                    질문건의
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '정보공유'}
-                                    onClick={() => {
-                                        onItemSelect('정보공유');
-                                        setSelectedTab('정보공유');
-                                    }}
-                                >
-                                    정보공유
-                                </Tab>
-                            </div>
-                            <Divider />
-                            <div className="boardcontent">
-                                <SpecialTab
-                                    $isSelected={selectedTab === '자유게시판'}
-                                    onClick={() => {
-                                        onItemSelect('자유게시판');
-                                        setSelectedTab('자유게시판');
-                                    }}
-                                >
-                                    자유게시판
-                                </SpecialTab>
-                                <Tab
-                                    $isSelected={selectedTab === '팀원모집'}
-                                    onClick={() => {
-                                        onItemSelect('팀원모집');
-                                        setSelectedTab('팀원모집');
-                                    }}
-                                >
-                                    팀원모집
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '플젝모집'}
-                                    onClick={() => {
-                                        onItemSelect('플젝모집');
-                                        setSelectedTab('플젝모집');
-                                    }}
-                                >
-                                    플젝모집
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '플젝자랑'}
-                                    onClick={() => {
-                                        onItemSelect('플젝자랑');
-                                        setSelectedTab('플젝자랑');
-                                    }}
-                                >
-                                    플젝자랑
-                                </Tab>
-                            </div>
-                            <Divider />
-                            <div className="boardcontent">
-                                <SpecialTab
-                                    $isSelected={
-                                        selectedTab === '멋사 오버플로우'
-                                    }
-                                    onClick={() => {
-                                        onItemSelect('멋사 오버플로우');
-                                        setSelectedTab('멋사 오버플로우');
-                                    }}
-                                >
-                                    멋사 오버플로우
-                                </SpecialTab>
-                                <Tab
-                                    $isSelected={selectedTab === '프론트'}
-                                    onClick={() => {
-                                        onItemSelect('프론트');
-                                        setSelectedTab('프론트');
-                                    }}
-                                >
-                                    프론트
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '백'}
-                                    onClick={() => {
-                                        onItemSelect('백');
-                                        setSelectedTab('백');
-                                    }}
-                                >
-                                    백
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '기획'}
-                                    onClick={() => {
-                                        onItemSelect('기획');
-                                        setSelectedTab('기획');
-                                    }}
-                                >
-                                    기획
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '디자인'}
-                                    onClick={() => {
-                                        onItemSelect('디자인');
-                                        setSelectedTab('디자인');
-                                    }}
-                                >
-                                    디자인
-                                </Tab>
-                                <Tab
-                                    $isSelected={selectedTab === '기타'}
-                                    onClick={() => {
-                                        onItemSelect('기타');
-                                        setSelectedTab('기타');
-                                    }}
-                                >
-                                    기타
-                                </Tab>
-                            </div>
-                        </>
-                    )}
+                    <div className="Board" onClick={goBoard}>
+                        {showSubList && (
+                            <>
+                                <div className="boardcontent">
+                                    <Tab
+                                        $isSelected={
+                                            selectedTab === '전체 게시글'
+                                        }
+                                        onClick={() => {
+                                            onItemSelect('전체 게시글');
+                                            setSelectedTab('전체 게시글');
+                                        }}
+                                    >
+                                        전체 게시글
+                                    </Tab>
+                                </div>
+                                <Divider />
+                                <div className="boardcontent">
+                                    <SpecialTab
+                                        $isSelected={selectedTab === '멋대중앙'}
+                                        onClick={() => {
+                                            onItemSelect('멋대중앙');
+                                            setSelectedTab('멋대중앙');
+                                        }}
+                                    >
+                                        멋대중앙
+                                    </SpecialTab>
+                                    <Tab
+                                        $isSelected={selectedTab === '공지사항'}
+                                        onClick={() => {
+                                            onItemSelect('공지사항');
+                                            setSelectedTab('공지사항');
+                                        }}
+                                    >
+                                        공지사항
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '질문건의'}
+                                        onClick={() => {
+                                            onItemSelect('질문건의');
+                                            setSelectedTab('질문건의');
+                                        }}
+                                    >
+                                        질문건의
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '정보공유'}
+                                        onClick={() => {
+                                            onItemSelect('정보공유');
+                                            setSelectedTab('정보공유');
+                                        }}
+                                    >
+                                        정보공유
+                                    </Tab>
+                                </div>
+                                <Divider />
+                                <div className="boardcontent">
+                                    <SpecialTab
+                                        $isSelected={
+                                            selectedTab === '자유게시판'
+                                        }
+                                        onClick={() => {
+                                            onItemSelect('자유게시판');
+                                            setSelectedTab('자유게시판');
+                                        }}
+                                    >
+                                        자유게시판
+                                    </SpecialTab>
+                                    <Tab
+                                        $isSelected={selectedTab === '팀원모집'}
+                                        onClick={() => {
+                                            onItemSelect('팀원모집');
+                                            setSelectedTab('팀원모집');
+                                        }}
+                                    >
+                                        팀원모집
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '플젝모집'}
+                                        onClick={() => {
+                                            onItemSelect('플젝모집');
+                                            setSelectedTab('플젝모집');
+                                        }}
+                                    >
+                                        플젝모집
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '플젝자랑'}
+                                        onClick={() => {
+                                            onItemSelect('플젝자랑');
+                                            setSelectedTab('플젝자랑');
+                                        }}
+                                    >
+                                        플젝자랑
+                                    </Tab>
+                                </div>
+                                <Divider />
+                                <div className="boardcontent">
+                                    <SpecialTab
+                                        $isSelected={
+                                            selectedTab === '멋사 오버플로우'
+                                        }
+                                        onClick={() => {
+                                            onItemSelect('멋사 오버플로우');
+                                            setSelectedTab('멋사 오버플로우');
+                                        }}
+                                    >
+                                        멋사 오버플로우
+                                    </SpecialTab>
+                                    <Tab
+                                        $isSelected={selectedTab === '프론트'}
+                                        onClick={() => {
+                                            onItemSelect('프론트');
+                                            setSelectedTab('프론트');
+                                        }}
+                                    >
+                                        프론트
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '백'}
+                                        onClick={() => {
+                                            onItemSelect('백');
+                                            setSelectedTab('백');
+                                        }}
+                                    >
+                                        백
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '기획'}
+                                        onClick={() => {
+                                            onItemSelect('기획');
+                                            setSelectedTab('기획');
+                                        }}
+                                    >
+                                        기획
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '디자인'}
+                                        onClick={() => {
+                                            onItemSelect('디자인');
+                                            setSelectedTab('디자인');
+                                        }}
+                                    >
+                                        디자인
+                                    </Tab>
+                                    <Tab
+                                        $isSelected={selectedTab === '기타'}
+                                        onClick={() => {
+                                            onItemSelect('기타');
+                                            setSelectedTab('기타');
+                                        }}
+                                    >
+                                        기타
+                                    </Tab>
+                                </div>
+                            </>
+                        )}
+                    </div>
                 </div>
             </Content>
             {/* <Divider />
