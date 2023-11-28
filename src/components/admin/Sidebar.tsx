@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import search from '../../img/community/search.svg';
 import { useNavigate } from 'react-router';
+import arrowup from '../../img/admin/Chevron_Up.svg';
+import arrowdown from '../../img/admin/Chevron_Down.svg';
 
 interface SideBarProps {
     onItemSelect: (item: string) => void;
@@ -54,13 +55,16 @@ const SideBar: React.FC<SideBarProps> = ({ onItemSelect, onSearch }) => {
                         $isSelected={false}
                         onClick={() => {
                             handleToggleSubList();
-                            onItemSelect('게시판');
                         }}
                     >
                         게시판{' '}
-                        {showSubList ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                        {showSubList ? (
+                            <ArrowUp src={arrowup} />
+                        ) : (
+                            <ArrowDown src={arrowdown} />
+                        )}
                     </Tab>
-                    <div className="Board" onClick={goBoard}>
+                    <div className="board" onClick={goBoard}>
                         {showSubList && (
                             <>
                                 <div className="boardcontent">
@@ -358,7 +362,7 @@ const Wrapper = styled.div<{ showSubList: boolean }>`
             props.showSubList &&
             css`
                 background: #212224;
-                color: #ff7710;
+                color: #ffffff;
             `}
     }
 
@@ -410,6 +414,16 @@ const Tab = styled.div<{ $isSelected: boolean }>`
             color: var(--Orange-600, #ff7710);
             font-weight: 700;
         `}
+`;
+
+const ArrowUp = styled.img`
+    width: 16px;
+    height: 16px;
+`;
+
+const ArrowDown = styled.img`
+    width: 16px;
+    height: 16px;
 `;
 
 const SpecialTab = styled(Tab)<{ $isSelected: boolean }>`

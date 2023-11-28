@@ -1,0 +1,271 @@
+[33mcommit 2c2740263bb743b24fe43d301fb9064683804617[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Tue Nov 28 19:15:30 2023 +0900
+
+    arrow svg 추가
+
+[33mcommit 4392543ec0f914f6a518e5f449722e3b48728b49[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 17:20:26 2023 +0900
+
+    모집알림 구현
+
+[33mcommit 1776bc3a9ac760ee9e5b72d1212ac03fe67f1ba2[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 05:48:52 2023 +0900
+
+    router 설정
+
+[33mcommit 0f14ea8cc5b4e0a36bd10901aec90a0edefd67cc[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 03:20:26 2023 +0900
+
+    저장 완료
+
+[33mcommit 428f56111a2f1768039d9da684ee6eac84de763a[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 03:14:14 2023 +0900
+
+    되돌리기
+
+[33mcommit aba609d378850f2d8611d66836f721a4b40ec432[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 03:10:39 2023 +0900
+
+    이상한 상태
+
+[33mcommit 845a1ef08e0ee451c8b328c9b0c6ad01fb717714[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 03:06:16 2023 +0900
+
+    모집알림 구현
+
+[33mcommit c245463bca3db5ecca23ca4dd74c2485fb84e5c3[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Sun Nov 26 02:23:02 2023 +0900
+
+    모달창 구현
+
+[33mcommit 649d112b7714de2c7a3b018a3af1b0d3a118ea29[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Thu Nov 23 05:13:34 2023 +0900
+
+    회원정보 추가
+
+[33mcommit 5598a386c18fbb2a207c4d1ab8b20a4fce92989e[m
+Author: WithKKM <201800535@hufs.ac.kr>
+Date:   Thu Nov 23 03:34:30 2023 +0900
+
+    university 추가
+
+[33mcommit 4ffc7846a85a920fbdbd8cef8c10e5a195b11b0b[m
+Author: hwayeong <rosie031123@naver.com>
+Date:   Sun Nov 19 23:49:12 2023 +0900
+
+    대학 로고 2차 수정
+
+[33mcommit 3097c622c1a6c9aaf2cdd05e5de5cc099d76203a[m
+Merge: 9e71e2a 3bf77b7
+Author: 서진 <dltjwls0529@ewhain.net>
+Date:   Sun Nov 19 01:40:55 2023 +0900
+
+    Merge pull request #48 from 529539/feature/landingPage
+    
+    [Feature] 참여 대학 로고 추가
+
+[33mcommit 3bf77b7d1e980f6bf0e19d6c76a65d8bb1ef0a13[m
+Author: 서진 <dltjwls0529@gmail.com>
+Date:   Sun Nov 19 01:40:10 2023 +0900
+
+    feat : 참여 대학 로고 추가
+
+[33mcommit 9e71e2ac81347e7322acd51836f5ee2e5068d893[m
+Merge: 5dd9333 a42dcc4
+Author: 서진 <dltjwls0529@ewhain.net>
+Date:   Sun Nov 19 00:36:16 2023 +0900
+
+    Merge pull request #47 from 529539/feature/landingPage
+    
+    Feature/landing page
+
+[33mcommit a42dcc48042fda44d0aa202a241fb55c7c3ab65a[m
+Author: 서진 <dltjwls0529@gmail.com>
+Date:   Sun Nov 19 00:34:42 2023 +0900
+
+    fix : 참여대학 대학 글자 크기 반응형 수정
+
+[33mcommit c8cef335240117d9f8563711ec9dec5f42f91b7e[m
+Author: 서진 <dltjwls0529@gmail.com>
+Date:   Sat Nov 18 23:58:35 2023 +0900
+
+    fix : 랜딩 페이지 활동, 트랙, 일정 디자인 수정
+
+[33mcommit 5dd933301ee5d9ad67f9c3d84c860175af0a25e2[m
+Author: hwayeong <rosie031123@naver.com>
+Date:   Sat Nov 18 17:07:33 2023 +0900
+
+    아직 대학별 로고 추가 안함
+
+[33mcommit f47f6edd54a46feb24afa35b0d6da957df1fcc13[m
+Author: hwayeong <rosie031123@naver.com>
+Date:   Sat Nov 18 11:59:53 2023 +0900
+
+    2차 수정
+
+[33mcommit 8edd2fa2fb3e175b7995f29f9c9eaf61019aaad3[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 01:37:05 2023 +0900
+
+    fix: 주요활동 반응형 문제 해결, 1280px 이상일 때
+
+[33mcommit 0091671a010e6629201c14b17ee9027c64f18b42[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 01:22:22 2023 +0900
+
+    fix: 대학 모집 버튼 클릭 시 구글 폼으로 이동
+
+[33mcommit 82096fcf7bcd43dce0df006d56b891323bbf9259[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 01:19:55 2023 +0900
+
+    fix: 구글 자동번역 기능 해제
+
+[33mcommit 5742bb027f4b9ca7dc4600e2747640e5b0f7d97a[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:53:28 2023 +0900
+
+    feat: 회칙, 개인정보처리방침 다운로드 기능 추가
+
+[33mcommit 9afe7a5a0b031746e8057e3ab3b0b57908c93091[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:31:27 2023 +0900
+
+    fix: 리크루팅 변경사항 적용
+
+[33mcommit a1abe9cb64ddce8f036ee7684d767ab9ccb0cadd[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:25:59 2023 +0900
+
+    fix: IT 창업 동아리로 변경, 개인정보처리방침 링크 추가
+
+[33mcommit 1b528704f4cf8deb45f8785cceed7f610cb3d061[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:22:23 2023 +0900
+
+    fix: 대표와 운영진들로 -> 일원으로
+
+[33mcommit aebf25290bad949b19568ea0fd5e2ee8a6053665[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:21:00 2023 +0900
+
+    fix: 푸터 인스타그램 계정 변경
+
+[33mcommit 43012b9aa2b238bf504dbc63d70d8e6502ae66fa[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:20:23 2023 +0900
+
+    fix: 랜딩 제작자 멘트 변경
+
+[33mcommit 51045ca59642ad0d71255080cbcb40fd330938b2[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:19:51 2023 +0900
+
+    fix: 랜딩 멋대 알림 신청 멘트 변경
+
+[33mcommit 8cbf5536d1c87b56a2691c800e81f2662879d5a3[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Sat Nov 18 00:06:36 2023 +0900
+
+    fix: 모달 내 신청하기 링크 넣기 및 푸터 일괄적으로 적용
+
+[33mcommit ba0be5013e37daf2473f7ff919cd283d5777cb9a[m
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Fri Nov 17 22:57:17 2023 +0900
+
+    fix: 주요활동, 트랙소개 반응형 오류 해결
+
+[33mcommit d559a5d3a736a27bc58d9fa173c9628361c58906[m
+Merge: 22613c6 76bc103
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 22:05:45 2023 +0900
+
+    병합 충돌 오류 해결 및, 컴파일러 에러 해결
+
+[33mcommit 22613c662f60538966c0dd9c5dc89816078ef040[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 22:03:14 2023 +0900
+
+    병합 충돌 오류 해결 및, 컴파일러 에러 해결
+
+[33mcommit adabbc976fadce30e4cd7875279db855fad97925[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 21:34:47 2023 +0900
+
+    충돌 해결
+
+[33mcommit 76bc10303302f267a6cf9fd97722cabb5701f60b[m
+Author: byeong <qudcks4885@gmail.com>
+Date:   Fri Nov 17 17:44:16 2023 +0900
+
+    fix : 회원가입 시 기수 입력창 삭제
+
+[33mcommit 7a2bb602d6b894dcfa9eb37873eb57c5ad124c56[m
+Author: byeong <qudcks4885@gmail.com>
+Date:   Fri Nov 17 17:43:40 2023 +0900
+
+    fix : 버튼 활성화
+
+[33mcommit 22f0182f8b40ae5b0fee53581431cec3191b273a[m
+Merge: a585d79 d90f91f
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 13:23:19 2023 +0900
+
+    .
+
+[33mcommit a585d796d80dcc4e19a9773d948fa2a3e8e271a7[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 13:08:42 2023 +0900
+
+    .
+
+[33mcommit d90f91fabd23aadd181d0f6d1b16fc652843565b[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 12:03:58 2023 +0900
+
+    //
+
+[33mcommit 8181d9882384d9c281909a2f1f7635562453eb5c[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Fri Nov 17 11:16:17 2023 +0900
+
+    1차 수정
+
+[33mcommit ce2f1ff26602dc1d95c304b674d28a7e5c30ee20[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Thu Nov 16 22:05:20 2023 +0900
+
+     1차 수장
+
+[33mcommit 4701ead76e0940afdd61c26c40e0a29882a56a0f[m
+Merge: 58ca440 a7b9fa5
+Author: ByeongChan Choi <77400298+chan-byeong@users.noreply.github.com>
+Date:   Thu Nov 16 18:09:57 2023 +0900
+
+    Merge pull request #44 from chan-byeong/main
+    
+    fix : 마이페이지 정보수정 항목 추가
+
+[33mcommit 58ca44001a602603c13096a70bdf47d89e5745fc[m
+Author: yanghwayeong <hwayeong@yanghwayeongui-MacBookPro.local>
+Date:   Wed Nov 15 18:28:44 2023 +0900
+
+    ..
+
+[33mcommit 109fe999d798a3698e23052258b99f6f711fd088[m
+Merge: 134e0d2 ade01fd
+Author: 김진호 <rlawlsgh1227@gmail.com>
+Date:   Wed Nov 15 18:02:03 2023 +0900
+
+    Merge branch 'main' of https://github.com/LikelionUniv/LikelionUniv_Frontend
+
+[33mcommit 134e0d2ba183b0e7ab

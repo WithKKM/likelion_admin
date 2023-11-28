@@ -1,29 +1,20 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-<<<<<<<< HEAD:src/components/admin/Board.tsx
 import OrderDropDown from './board/OrderDropDown';
 import WriteIcon from '../../img/community/write.svg';
 import PostList from './board/PostList';
 import { PostBoxProp } from './board/PostBox';
-========
-import OrderDropDown from './OrderDropDown';
-import WriteIcon from '../../../img/community/write.svg';
-import PostList from './PostList';
-import { PostBoxProp } from './PostBox';
->>>>>>>> parent of 4392543 (모집알림 구현):src/components/admin/board/Notice.tsx
 
-interface NoticeProps {
+export interface BoardProps {
     selectedItem: string;
     searchQuery: string;
 }
 
 const contentSubtitles: Record<string, string> = {
-    회원정보: '멋대 중앙의 공지사항을 확인할 수 있을지도?.',
-    모집알림: '미정.',
-    전체게시글: '미정.',
-    공지사항: '미정.',
+    공지사항: '멋대 중앙의 공지사항을 확인할 수 있어.',
     질문건의: '미정.',
     정보공유: '미정.',
+    팀원모짐: '미정.',
     플젝모집: '미정.',
     플젝자랑: '미정.',
     프론트: '미정.',
@@ -32,14 +23,14 @@ const contentSubtitles: Record<string, string> = {
     디자인: '미정.',
     기타: '미정.',
 };
-
-const Board: React.FC<NoticeProps> = ({ selectedItem, searchQuery }) => {
+const Board: React.FC<BoardProps> = ({ selectedItem, searchQuery }) => {
     const content = selectedItem;
-
+    const subtitle = contentSubtitles[content];
     //api 연결할때 PostList에 props 추가해서 카테고리에 맞는 data 받아서 구성하도록 수정할 예정
     return (
         <Wrapper>
             <Title>{content}</Title>
+            <SubTitle>{subtitle}</SubTitle>
             <Divider />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <OrderDropDown />

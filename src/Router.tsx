@@ -14,17 +14,14 @@ import ProjectList from './components/project/ProjectList';
 import Community from './routes/Community';
 import RecruitPage from './routes/RecruitPage';
 import AboutPage from './routes/AboutPage';
-import Admin from './routes/Admin';
 import RecruitAlert from './components/admin/RecruitAlert';
 import User from './components/admin/User';
-<<<<<<< HEAD
 import Board from './components/admin/Board';
-=======
->>>>>>> parent of 4392543 (모집알림 구현)
 import BabyLion from './components/recruit/apply/mobile/BabyLion';
 import Recruit from './components/univrecruit/UnivRecruit';
 import UnivRecruit from './components/univrecruit/UnivRecruit';
 import AdminBoard from './routes/AdminBoard';
+import AdminPage from './routes/Admin';
 
 const router = createBrowserRouter([
     {
@@ -101,7 +98,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/admin',
-                element: <Admin />,
+                element: <AdminPage />,
                 children: [
                     {
                         path: '',
@@ -116,10 +113,6 @@ const router = createBrowserRouter([
                         element: <AdminBoard />,
                     },
                 ],
-            },
-            {
-                path: '/adminboard',
-                element: <AdminBoard />,
             },
         ],
     },
